@@ -1,0 +1,996 @@
+.presentation, .conference, .learn, .CEO, .partners, .connect {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+}
+
+header .buttonWrapper .newsLetterButton, footer .footerButtonWrapper .footer.newsLetterButton {
+  padding: 0.2rem 1.8rem;
+  background-color: white;
+  font-size: 1rem;
+  font-family: "Gothic HTF", "Oswald";
+}
+
+.fancy {
+  -webkit-animation: 2s 1 appearances;
+          animation: 2s 1 appearances;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  line-height: 1.8rem;
+  color: #ff7357;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+h1 {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 200;
+}
+
+h2, p, i, h3 {
+  color: black;
+}
+
+strong {
+  color: black;
+  font-size: 2.5rem;
+  font-family: "Gothic HTF", "Oswald";
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: inline-block;
+}
+
+i:hover {
+  cursor: pointer;
+}
+
+::-webkit-input-placeholder {
+  color: #ff7357;
+  font-style: italic;
+}
+
+:-ms-input-placeholder {
+  color: #ff7357;
+  font-style: italic;
+}
+
+::-ms-input-placeholder {
+  color: #ff7357;
+  font-style: italic;
+}
+
+::placeholder {
+  color: #ff7357;
+  font-style: italic;
+}
+
+body {
+  width: 100%;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 15vh;
+  margin: 0 7%;
+  background-color: white;
+}
+
+header .iconWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .iconWrapper .icon {
+  font-size: 1.5rem;
+  padding-right: 2vw;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+header .iconWrapper .iconEnd {
+  font-size: 1.5rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+header .titleWrapper {
+  width: 50%;
+}
+
+header .titleWrapper .webTitle {
+  height: 100%;
+  width: 50%;
+}
+
+header .buttonWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .buttonWrapper .newsLetterButton {
+  border: solid 1px #ff7357;
+  background-color: white;
+}
+
+header .buttonWrapper .newsLetterButton:hover {
+  -webkit-animation: 0.4s 1 hoverOnWhite;
+          animation: 0.4s 1 hoverOnWhite;
+  -webkit-animation: 0.2s 1 changeFont;
+          animation: 0.2s 1 changeFont;
+  background-color: #ff7357;
+  color: white;
+}
+
+@media (max-width: 1100px) {
+  .buttonWrapper, .iconWrapper {
+    display: none !important;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .titleWrapper {
+    width: 100% !important;
+  }
+}
+
+.presentation {
+  background-color: #ff7357;
+  text-align: center;
+}
+
+.presentation .presentationText {
+  margin: 10% 17%;
+}
+
+.presentation .presentationText .motto {
+  font-size: 2.3em;
+  line-height: 4rem;
+  font-family: "Mercury", "Raleway";
+}
+
+.presentation .presentationText .hashtag {
+  font-weight: bolder;
+  font-size: 3rem;
+  margin-top: 8rem;
+  font-family: "Gothic HTF", "Oswald";
+}
+
+@media (max-width: 400px) {
+  .presentationText {
+    margin: 10% 7%;
+  }
+  .presentationText .motto {
+    font-size: 1.5rem !important;
+  }
+  .presentationText .hashtag {
+    font-size: 2.2rem !important;
+  }
+}
+
+.conference {
+  font-family: "Mercury", "Raleway";
+}
+
+.conference .conferenceWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10% 7%;
+  width: 100%;
+  background-color: white;
+}
+
+.conference .conferenceWrap .conferenceImgWrap {
+  margin-right: 5%;
+  width: 80%;
+}
+
+.conference .conferenceWrap .conferenceVid {
+  width: 100%;
+}
+
+.conference .conferenceWrap .conferenceButton {
+  border: solid 1px #ff7357;
+  background-color: white;
+  padding: 0.6rem 2rem;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  font-size: 1rem;
+  font-family: "Gothic HTF", "Oswald" !important;
+}
+
+.conference .conferenceWrap .conferenceButton:hover {
+  -webkit-animation: 0.4s 1 hoverOnWhite;
+          animation: 0.4s 1 hoverOnWhite;
+  -webkit-animation: 0.2s 1 changeFont;
+          animation: 0.2s 1 changeFont;
+  background-color: #ff7357;
+  color: white;
+}
+
+.conference .conferenceWrap h2 {
+  font-size: 2rem;
+}
+
+.conference .conferenceWrap .down {
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 950px) {
+  .conferenceWrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    margin: 0 7%;
+  }
+  .conferenceImgWrap {
+    margin: 5% 0 !important;
+  }
+}
+
+.learn {
+  background-color: #f9f9f9;
+  min-height: 160vh !important;
+}
+
+.learn .learnWrap {
+  width: 100%;
+}
+
+.learn .titleWrap {
+  font-family: "Gothic HTF", "Oswald";
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.learn .titleWrap h2 {
+  font-size: 3rem;
+  margin-bottom: 4rem;
+}
+
+.learn .titleWrap p {
+  margin: 0 28%;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.learn .cardContainer {
+  margin: 0 7%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: space-between;
+      -ms-flex-align: space-between;
+          align-items: space-between;
+}
+
+.learn .cardContainer .card {
+  font-family: "Mercury", "Raleway";
+  font-size: 2rem;
+  color: white;
+  width: 100%;
+  height: 200px;
+}
+
+.learn .cardContainer h3 {
+  font-family: "Gothic HTF", "Oswald";
+}
+
+.learn .cardContainer p, .learn .cardContainer i {
+  font-family: "Gothic HTF", "Oswald";
+  font-size: 1.2rem;
+  margin-top: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+
+.learn .cardContainer h4 {
+  margin: 30px 0 0 20px;
+  color: white;
+  font-weight: 200;
+  font-family: "Mercury", "Raleway";
+}
+
+.learn .cardContainer .first {
+  background-color: #ff7357;
+}
+
+.learn .cardContainer .second {
+  background-color: #b4dac0;
+}
+
+.learn .cardContainer .third {
+  background-color: #f4b72b;
+}
+
+.learn .cardContainer .column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 33%;
+  margin: 0 50px 0 0;
+}
+
+@media (max-width: 850px) {
+  .cardContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .column {
+    width: 100% !important;
+    margin: 50px 0 !important;
+  }
+  .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  h4 {
+    margin: 0 !important;
+  }
+}
+
+@media (max-width: 450px) {
+  h2 {
+    margin-top: 1rem;
+    font-size: 1.4rem !important;
+  }
+  p {
+    font-size: 1rem !important;
+    margin: 0 14% !important;
+  }
+}
+
+.CEO {
+  background-color: #b4dac0;
+}
+
+.CEO .CEOWrap {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 7%;
+}
+
+.CEO .CEOWrap .CEOpic {
+  height: 50%;
+  width: 500px;
+  border-radius: 50%;
+  margin: 0 5% 0 0;
+}
+
+.CEO .CEOquote {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.CEO .CEOquote p {
+  font-family: "Mercury", "Raleway";
+  margin-top: 4rem;
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
+.CEO .CEOquote .signature {
+  color: black;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  font-family: "Gothic HTF", "Oswald" !important;
+}
+
+@media (max-width: 850px) {
+  .CEOWrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .CEOpic {
+    margin: 5% 0 !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .CEOpic {
+    width: 250px !important;
+  }
+}
+
+@media (max-width: 250px) {
+  .CEOpic {
+    width: 100px !important;
+  }
+}
+
+.partners {
+  min-height: 100vh;
+  background-color: white;
+}
+
+.partners h1 {
+  color: black;
+  font-size: 3rem;
+  margin-top: 5%;
+  font-weight: bold;
+  font-family: "Gothic HTF", "Oswald";
+}
+
+.partners .partnersWrap {
+  width: 100%;
+  text-align: center;
+  margin: 0 7%;
+}
+
+.partners .gallery {
+  margin-top: 4rem;
+}
+
+.partners .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 1%;
+}
+
+.partners .row4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 1%;
+}
+
+.partners .logoWrap {
+  width: 100px;
+  height: 100px;
+}
+
+.partners .logoWrapBig {
+  width: 150px;
+  height: 150px;
+}
+
+.partners .logoWrapBigger {
+  width: 175px;
+  height: 175px;
+}
+
+.partners .logo {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    margin-top: 2rem;
+    font-size: 1.7rem !important;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 500px) {
+  .logoWrap {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  .logoWrapBig {
+    width: 75px !important;
+    height: 75px !important;
+  }
+  .logoWrapBigger {
+    width: 100px !important;
+    height: 100px !important;
+  }
+}
+
+.connect {
+  font-size: 1rem;
+  background-color: #f9f9f9;
+}
+
+.connect form {
+  margin: 0 7%;
+  width: 100%;
+  text-align: center;
+}
+
+.connect .connectTease {
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.connect .connectTease h2 {
+  color: #ff7357;
+  font-size: 2.3rem;
+  font-family: "Mercury", "Raleway";
+}
+
+.connect .connectTease p {
+  color: #ff7357;
+  font-size: 1.5rem;
+  font-family: "Mercury", "Raleway";
+}
+
+.connect .connectForm {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 25% 25% 25% 25%;
+      grid-template-rows: 25% 25% 25% 25%;
+  grid-gap: 1rem 5rem;
+}
+
+.connect .connectForm .yes {
+  padding-right: 5rem;
+  color: #ff7357;
+  font-size: 1.3rem;
+  font-family: "Mercury", "Raleway";
+  font-weight: bold;
+}
+
+.connect .connectForm .text {
+  background-color: #f9f9f9;
+  border: none;
+  border-bottom: 1px solid #ff7357;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 10px;
+  width: 100%;
+  font-size: 1.4rem;
+  font-family: "Mercury", "Raleway";
+}
+
+.connect .connectForm select {
+  font-size: 1.4rem;
+  width: 100%;
+  height: 75%;
+  font-family: "Gothic HTF", "Oswald";
+}
+
+.connect .connectForm label {
+  font-size: 1.4rem;
+  padding-right: 7rem;
+  font-family: "Gothic HTF", "Oswald";
+}
+
+.connect .connectForm .flexForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.connect .connectForm .buttonFormWrap {
+  margin-top: 4rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.connect .connectForm #updates {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: white;
+  min-width: 20px;
+  min-height: 20px;
+  border: 1px solid #ff7357;
+}
+
+.connect .connectForm #updates:hover {
+  background-color: #f9f9f9;
+}
+
+.connect .connectForm #updates:checked {
+  background-color: #ff7357;
+}
+
+.connect .submitButton {
+  background-color: #ff7357;
+  color: white;
+  font-size: 1.4rem;
+  padding: 0.6rem 2.2rem;
+  border: none;
+  font-family: "Gothic HTF", "Oswald";
+}
+
+.connect .submitButton:hover {
+  -webkit-animation: 0.4s 1 hoverOnPink;
+          animation: 0.4s 1 hoverOnPink;
+  background-color: #ff6546;
+}
+
+@media screen and (max-width: 800px) {
+  .connectForm {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .n1 {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .n2 {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .n3 {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  .n4 {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+  .n5 {
+    -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+            order: 5;
+  }
+  .n6 {
+    -webkit-box-ordinal-group: 7;
+        -ms-flex-order: 6;
+            order: 6;
+  }
+  .n7 {
+    -webkit-box-ordinal-group: 8;
+        -ms-flex-order: 7;
+            order: 7;
+  }
+  .flexForm {
+    margin: 1rem 0;
+  }
+}
+
+@media (max-width: 450px) {
+  .buttonFormWrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .yes {
+    padding-right: 0 !important;
+  }
+  .submitButton {
+    margin: 20px 0;
+  }
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 20vh;
+  margin: 0 7%;
+  background-color: white;
+}
+
+footer .footerButtonWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .footerButtonWrapper .footer.newsLetterButton {
+  color: black;
+  border: solid 1px black;
+}
+
+footer .footerButtonWrapper .footer.newsLetterButton:hover {
+  -webkit-animation: 0.4s 1 hoverOnWhite;
+          animation: 0.4s 1 hoverOnWhite;
+  background-color: #ff7357;
+  -webkit-animation: 0.4s 1 changeFont;
+          animation: 0.4s 1 changeFont;
+  color: white;
+  border: 1px solid #ff7357;
+}
+
+footer .footerIconWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .footerIconWrapper .footerIcon {
+  font-size: 1.5rem;
+  padding-right: 2vw;
+  color: black !important;
+}
+
+footer .footerIconWrapper .footerIconEnd {
+  font-size: 1.5rem;
+  color: black !important;
+}
+
+footer .footerCopyWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Gothic HTF", "Oswald";
+}
+
+@media (max-width: 800px) {
+  footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 1rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer .footerIconWrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer div {
+    margin: 20px 0;
+  }
+}
+
+.first.arrow_box, .second.arrow_box, .third.arrow_box {
+  position: relative;
+  margin-bottom: 4rem;
+  width: auto;
+  margin-top: 1rem;
+}
+
+.first.arrow_box {
+  border: 2px solid #ff7357;
+}
+
+.second.arrow_box {
+  border: 2px solid #b4dac0;
+}
+
+.third.arrow_box {
+  border: 2px solid #f4b72b;
+}
+
+.arrow_box:after, .arrow_box:before {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.first.arrow_box:after, .second.arrow_box:after, .third.arrow_box:after {
+  border-color: rgba(136, 183, 213, 0);
+  border-width: 12x;
+  margin-left: -12px;
+}
+
+.first.arrow_box:after {
+  border-top-color: #ff7357;
+}
+
+.second.arrow_box:after {
+  border-top-color: #b4dac0;
+}
+
+.third.arrow_box:after {
+  border-top-color: #f4b72b;
+}
+
+.first.arrow_box:before, .second.arrow_box:before, .third.arrow_box:before {
+  border-color: rgba(194, 225, 245, 0);
+  border-width: 15px;
+  margin-left: -15px;
+}
+
+.first.arrow_box:before {
+  border-top-color: #ff7357;
+}
+
+.second.arrow_box:before {
+  border-top-color: #b4dac0;
+}
+
+.third.arrow_box:before {
+  border-top-color: #f4b72b;
+}
+
+@-webkit-keyframes hoverOnWhite {
+  from {
+    background-color: white;
+  }
+  to {
+    background-color: #ff7357;
+  }
+}
+
+@keyframes hoverOnWhite {
+  from {
+    background-color: white;
+  }
+  to {
+    background-color: #ff7357;
+  }
+}
+
+@-webkit-keyframes changeFont {
+  from {
+    color: #ff7357;
+  }
+  to {
+    color: white;
+  }
+}
+
+@keyframes changeFont {
+  from {
+    color: #ff7357;
+  }
+  to {
+    color: white;
+  }
+}
+
+@-webkit-keyframes hoverOnPink {
+  from {
+    background-color: #ff7357;
+  }
+  to {
+    background-color: #ff6546;
+  }
+}
+
+@keyframes hoverOnPink {
+  from {
+    background-color: #ff7357;
+  }
+  to {
+    background-color: #ff6546;
+  }
+}
+
+@-webkit-keyframes appearances {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes appearances {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,922 @@
+$fonts:(
+    font01: "Gothic HTF",
+    font01b:'Oswald',
+    font02:"Mercury",
+    font02b:"Raleway",
+
+);
+
+$fontColours:(
+    primary: rgb(255,115,87),
+    secondary:black,
+    tertiary: white,
+    
+);
+
+$backgroundColours:(
+    header:white,
+    presentation:rgb(255,115,87),
+    conference:white,
+    learn:rgb(249,249,249),
+    first:rgb(255,115,87),
+    second:rgb(180,218,192),
+    third:rgb(244,183,43),
+    CEO:rgb(180,218,192),
+    partners: white,
+    connect:rgb(249,249,249),
+    footer: white,
+);
+
+$divisionHeight:100vh;
+$currentMargin: 7%;
+
+%flexContainer{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height:$divisionHeight;
+}
+
+%signButton{
+    padding: 0.2rem 1.8rem;
+    background-color:white;
+    font-size:1rem;
+    font-family: map-get($fonts ,font01 ),map-get($fonts ,font01b );
+}
+
+.fancy{
+    animation: 2s 1 appearances;
+}
+
+.hidden{
+    visibility:hidden;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:content-box;
+    line-height: 1.8rem;
+    color: map-get($fontColours,primary);
+
+}
+
+button:hover{
+    cursor:pointer;
+}
+
+h1{
+    color:map-get($fontColours,tertiary);
+    font-size:2.5rem;
+    font-weight: 200;
+}
+
+h2, p,i, h3{
+    color:map-get($fontColours,secondary);
+}
+
+strong{
+    color:map-get($fontColours,secondary);
+    font-size:2.5rem;
+    font-family: map-get($fonts ,font01 ),map-get($fonts ,font01b );
+}
+
+ul{
+    list-style: none;
+    
+}
+li{
+    display:inline-block;
+}
+
+i:hover{
+    cursor:pointer;
+}
+
+::placeholder {
+    color:map-get($fontColours,primary);
+    font-style: italic;
+}
+
+body{
+    width:100%;
+}
+
+header{
+    display:flex;
+    text-align: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 15vh;
+    margin:0 $currentMargin;
+    background-color: map-get($backgroundColours, header );
+
+    .iconWrapper{
+        display:flex;
+        align-items: center;
+
+            .icon{
+                font-size:1.5rem;
+                padding-right:2vw;
+                align-self: center;
+            }
+
+            .iconEnd{
+                font-size:1.5rem;
+                align-self: center;
+            }
+    }
+
+    .titleWrapper{
+        width:50%;
+
+            .webTitle{
+                height:100%;
+                width:50%;
+            }
+        
+    }
+
+    .buttonWrapper{
+        display:flex;
+        align-items: center;
+
+            .newsLetterButton{
+                @extend %signButton;
+                border: solid 1px map-get($fontColours,primary);
+                background-color:map-get($fontColours, tertiary);
+            }
+            
+            .newsLetterButton:hover{
+                animation: 0.4s 1 hoverOnWhite;
+                animation: 0.2s 1 changeFont;
+                background-color: map-get($fontColours,primary);
+                color:map-get($fontColours,tertiary);
+            }       
+    }
+}
+
+@media(max-width:1100px) {
+
+.buttonWrapper,.iconWrapper{
+    display:none !important;
+    align-items: center;
+
+}
+
+.titleWrapper{
+    width:100% !important;
+}
+}
+//*****************************************************************************
+.presentation{
+
+    @extend %flexContainer;
+    background-color: map-get($backgroundColours, presentation );
+    text-align: center;
+    
+    .presentationText {
+        margin: 10% $currentMargin+10%;
+
+            .motto{
+                font-size:2.3em;
+                line-height: 4rem;
+                font-family: map-get($fonts ,font02 ),map-get($fonts ,font02b );
+
+            }
+
+            .hashtag{
+                font-weight:bolder;
+                font-size:3rem;
+                margin-top:8rem;
+                font-family: map-get($fonts ,font01 ),map-get($fonts ,font01b );
+            }
+      } 
+
+      
+}
+@media(max-width:400px){
+
+    .presentationText{
+        margin: 10% $currentMargin;
+        .motto{
+            font-size:1.5rem !important;   
+        }
+        .hashtag{
+            font-size:2.2rem !important;
+        }
+    }
+}
+//************************************************************
+.conference{
+
+    @extend %flexContainer;
+    font-family: map-get($fonts ,font02 ),map-get($fonts ,font02b );
+
+    .conferenceWrap{
+        display:flex;
+        justify-content: center;
+        margin: 10% $currentMargin;
+        width:100%;
+        background-color: map-get($backgroundColours, conference );
+
+        .conferenceImgWrap{
+            margin-right: 5%;
+            width:80%;
+        }   
+
+        .conferenceVid{  
+            width:100%;  
+        }
+
+        .conferenceButton{
+            border: solid 1px map-get($fontColours,primary);;
+            background-color:map-get($fontColours,tertiary);
+            padding:0.6rem 2rem;
+            box-sizing: content-box;
+            font-size:1rem;
+            font-family: map-get($fonts ,font01 ),map-get($fonts ,font01b ) !important;
+        
+        }
+
+        .conferenceButton:hover{
+            animation: 0.4s 1 hoverOnWhite;
+            animation: 0.2s 1 changeFont;
+            background-color: map-get($fontColours,primary);;
+            color:map-get($fontColours,tertiary);
+        }
+
+        h2{
+            font-size:2rem;
+        }
+
+        .down{
+            margin-bottom:3rem;
+            
+        }
+    }
+}
+
+@media (max-width:950px){
+
+   .conferenceWrap{
+       flex-direction:column;
+       align-items:center;
+       text-align: center;
+       margin: 0 $currentMargin;
+   }
+
+   .conferenceImgWrap{
+    margin:5% 0 !important;
+}
+}
+ //************************************************************
+.learn{
+
+    @extend %flexContainer;
+    background-color: map-get($backgroundColours, learn );
+    min-height: $divisionHeight+60vh !important;
+  
+    .learnWrap{
+        width:100%;   
+    }
+
+    .titleWrap{
+        font-family: map-get($fonts ,font01 ),map-get($fonts ,font01b );
+        text-align: center;
+        margin-bottom:6rem;
+
+        h2{
+            font-size:3rem;
+            margin-bottom:4rem;
+        }
+
+        p{
+         margin:0 $currentMargin*4;
+            font-size:1.1rem;
+            font-weight:bold;
+        }
+    }
+
+    .cardContainer{
+        margin: 0 $currentMargin;
+        display:flex;
+        align-items: space-between;
+        
+
+            .card{
+                font-family: map-get($fonts ,font02 ),map-get($fonts ,font02b );
+                font-size:2rem;
+                color:map-get($fontColours,tertiary);
+                width:100%;
+                height: 200px; 
+            }
+            h3{
+                font-family: map-get($fonts ,font01 ),map-get($fonts ,font01b );
+            }
+            p,i{
+                font-family: map-get($fonts ,font01 ),map-get($fonts ,font01b );
+                font-size:1.2rem;
+                margin-top:0.6rem;
+                margin-bottom: 0.6rem;
+            }
+
+            h4{ 
+                margin:30px 0 0 20px;
+                color:white;
+                font-weight:200;
+                font-family: map-get($fonts ,font02 ),map-get($fonts ,font02b );
+            }
+
+            .first{
+                background-color:map-get($backgroundColours,first);
+      
+            }
+    
+            .second{
+                background-color: map-get($backgroundColours, second );
+            }
+    
+            .third{
+          
+                background-color: map-get($backgroundColours,third);
+            }
+
+            .column{
+                display:flex;
+                flex-direction:column;
+                width:33%;
+                margin: 0 50px 0 0;
+            }
+
+    }
+
+}
+
+@media(max-width:850px){
+
+    .cardContainer {
+        flex-direction:column;
+        align-items:center;
+        text-align: center;
+    }
+    .column{
+        width:100% !important;
+        margin: 50px 0 !important;
+
+    }
+
+    .card{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        
+    }
+
+    h4{
+        margin:0 !important;
+    }
+}
+
+@media (max-width:450px){
+
+    h2{
+        margin-top:1rem;
+        font-size:1.4rem !important;
+    }
+    p{
+        font-size:1rem !important;
+        margin: 0 $currentMargin*2 !important;
+    }
+}
+//***************************************
+.CEO{
+
+    @extend %flexContainer; 
+    background-color: map-get($backgroundColours, CEO );
+    
+    .CEOWrap{
+        width:100%;
+        display:flex;
+        justify-content: center;
+        margin: 0 $currentMargin; 
+
+        .CEOpic{
+            height:50%;
+            width:500px;
+            border-radius: 50%;
+            margin:0 5% 0 0;
+        }
+    }
+    .CEOquote{
+      align-self:flex-start;
+
+      p{
+        font-family: map-get($fonts ,font02 ),map-get($fonts ,font02b );
+          margin-top:4rem;
+          font-size:2rem;
+          line-height: 2.5rem;
+      }
+
+      .signature{
+        color:map-get($fontColours, secondary );
+        font-size:1.5rem;
+        line-height: 2.5rem;
+        font-family: map-get($fonts ,font01 ),map-get($fonts ,font01b ) !important;
+      }
+    }
+}
+
+@media (max-width:850px){
+
+    .CEOWrap{
+        flex-direction:column;
+        align-items: center;
+        text-align:center;
+    }
+
+    .CEOpic{
+        margin:5% 0 !important;
+    }
+}
+
+@media(max-width:600px){
+
+    .CEOpic{
+        width:250px !important;
+    }
+
+}
+
+@media(max-width:250px){
+
+    .CEOpic{
+        width:100px !important;
+    }
+
+}
+//************************************************
+.partners{
+    @extend %flexContainer;
+    min-height:$divisionHeight;
+    background-color: map-get($backgroundColours, partners );
+
+    h1{
+        
+        color:map-get($fontColours,secondary);;
+        font-size:3rem;
+        margin-top:5%;
+        font-weight:bold;
+        font-family: map-get($fonts ,font01 ),map-get($fonts ,font01b )
+    }
+
+    .partnersWrap{
+        width:100%;
+        text-align: center;
+        margin:0 $currentMargin;
+    }
+
+    .gallery{
+        margin-top:4rem;
+    }
+
+    .row{
+        display:flex;
+ 
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 0 1%;
+    }
+
+    .row4{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 1%;
+    }
+
+  .logoWrap{
+      width: 100px;
+      height:100px;
+    
+  }
+
+  .logoWrapBig{
+    width: 150px;
+    height:150px;
+  
+}
+
+
+  .logoWrapBigger{
+    width: 175px;
+    height:175px;
+  
+}
+
+  .logo{
+      width:100%;
+      height:100%;
+  }
+
+}
+
+@media(max-width:600px){
+
+    h1{
+        margin-top:2rem;
+        font-size:1.7rem !important;
+        font-weight:bold;
+       
+    }
+}
+
+@media(max-width:500px){
+    .logoWrap{
+        width: 50px !important;
+        height:50px !important;
+      
+    }
+  
+    .logoWrapBig{
+      width: 75px !important;
+      height:75px !important;
+    
+  }
+  
+  
+    .logoWrapBigger{
+      width: 100px !important;
+      height:100px !important;
+    
+  }
+
+}
+//********************************************************************
+.connect{
+    @extend %flexContainer;
+    
+    font-size:1rem;
+    background-color: map-get($backgroundColours, connect);
+
+    form{
+        margin:0 $currentMargin;
+        width:100%;
+        text-align:center;
+    }
+
+    .connectTease{
+        text-align: center;
+        margin-bottom: 6rem;
+
+        h2{
+            color:map-get($fontColours,primary);
+            font-size:2.3rem;
+            font-family: map-get($fonts ,font02 ),map-get($fonts ,font02b );
+        }
+
+        p{
+            color:map-get($fontColours,primary);
+            font-size:1.5rem;
+            font-family: map-get($fonts ,font02 ),map-get($fonts ,font02b );
+
+        }
+    }
+
+    .connectForm{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 25% 25% 25% 25%;
+        grid-gap: 1rem 5rem;
+
+        .yes{
+            padding-right: 5rem;
+            color:map-get($fontColours,primary);
+            font-size:1.3rem;
+            font-family: map-get($fonts ,font02 ),map-get($fonts ,font02b);
+            font-weight:bold;
+        }
+
+        .text{
+            background-color: rgb(249,249,249);
+            border:none;
+            border-bottom: 1px solid map-get($fontColours,primary);
+            display:flex;
+            padding-bottom: 10px;
+            width:100%;
+            font-size:1.4rem;
+            font-family: map-get($fonts ,font02 ),map-get($fonts ,font02b );
+        }
+
+        select{
+            font-size:1.4rem;
+            width:100%;
+            height: 75%;
+            font-family: map-get($fonts ,font01 ),map-get($fonts ,font01b );
+            }
+
+        label{
+            font-size:1.4rem;
+            padding-right:7rem;
+            font-family: map-get($fonts ,font01 ),map-get($fonts ,font01b );
+        }
+
+        .flexForm{
+            display:flex;
+            width:100%;
+            align-items:flex-end;
+        }
+
+
+         .buttonFormWrap{
+            margin-top:4rem;
+            width:100%;
+            display:flex;
+            justify-content: space-between;
+            align-items:center;
+            }
+
+        #updates{
+            appearance: none;
+            background-color: map-get($fontColours,tertiary);
+            min-width:20px;
+            min-height:20px;
+            border:1px solid map-get($fontColours,primary);
+        }
+
+        #updates:hover{
+            background-color:rgb(249,249,249);
+        }
+
+        #updates:checked{
+                background-color: rgb(255,115,87);
+        }
+
+    }
+
+    .submitButton{
+        background-color:rgb(255,115,87);
+        color:map-get($fontColours,tertiary);
+        font-size:1.4rem;
+        padding: 0.6rem 2.2rem;
+        border:none;
+        font-family: map-get($fonts ,font01 ),map-get($fonts ,font01b );
+    }
+
+    .submitButton:hover{
+        animation: 0.4s 1 hoverOnPink;
+        background-color: rgb(255, 101, 70);
+    }
+   
+}
+
+@media screen and (max-width:800px){ 
+
+    .connectForm{
+        display:flex !important;
+        flex-direction:column;
+    }
+
+    .n1{
+        order:1;
+    }
+
+    .n2{
+        order:2;
+    }
+
+    .n3{
+        order:3;
+    }
+
+    .n4{
+        order:4;
+    }
+
+    .n5{
+        order:5;
+    }
+
+    .n6{
+        order:6;
+    }
+
+    .n7{
+        order:7;
+    }
+
+    .flexForm{
+        margin:1rem 0;
+    }
+}
+
+@media(max-width:450px){
+
+    .buttonFormWrap{
+        flex-direction:column;
+        align-items: center;
+    }
+
+    .yes{
+        padding-right:0 !important;
+    }
+
+    .submitButton{
+        margin:20px 0;
+    }
+}
+//**************************************************************
+footer{
+
+    display:flex;
+    text-align: center;
+    justify-content: space-between;
+    height: 20vh;
+    margin: 0 $currentMargin;
+    background-color: map-get($backgroundColours, footer );
+
+    .footerButtonWrapper{
+        display:flex;
+        align-items: center;
+
+            .footer.newsLetterButton{
+                @extend %signButton;
+                color:map-get($fontColours,secondary);
+                border: solid 1px map-get($fontColours,secondary);;
+            }
+
+            .footer.newsLetterButton:hover{
+                animation: 0.4s 1 hoverOnWhite;
+                background-color: map-get($fontColours,primary);
+                animation: 0.4s 1 changeFont;
+                color:white;
+                border:1px solid map-get($fontColours,primary);;
+            }
+
+
+    }
+    
+    .footerIconWrapper{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+            .footerIcon{
+                font-size:1.5rem;
+                padding-right:2vw;
+                color:map-get($fontColours,secondary) !important;
+            }
+
+            .footerIconEnd{
+                font-size:1.5rem;
+           
+                color:map-get($fontColours,secondary) !important;
+            }
+     }
+
+    .footerCopyWrapper{
+        display:flex;
+        align-items: center;
+        font-family: map-get($fonts ,font01 ),map-get($fonts ,font01b );
+     }
+
+
+}
+
+@media(max-width:800px){
+
+  footer{
+      flex-direction:column;
+      margin-top:1rem;
+      align-items:center;
+
+      .footerIconWrapper{
+          flex-direction:column;
+  
+      }
+      div{
+        margin:20px 0;
+      }
+  }
+}
+
+////************************************
+
+%arrow{
+	position: relative;
+    margin-bottom: 4rem; 
+    width:auto;
+    margin-top:1rem;
+}
+.first.arrow_box {
+    @extend %arrow;
+    border: 2px solid map-get($backgroundColours,first);;
+ }
+
+ .second.arrow_box {
+    @extend %arrow;
+    border: 2px solid map-get($backgroundColours,second);
+ }
+
+ .third.arrow_box {
+    @extend %arrow;
+    border: 2px solid map-get($backgroundColours,third);
+ }
+
+.arrow_box:after, .arrow_box:before {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+    pointer-events: none;
+    
+}
+
+%arrowaft{
+	border-color: rgba(136, 183, 213, 0);
+	border-width: 12x;
+	margin-left: -12px;
+}
+
+.first.arrow_box:after {
+    @extend %arrowaft;
+    border-top-color:map-get($backgroundColours,first);
+}
+
+.second.arrow_box:after {
+    @extend %arrowaft;
+    border-top-color:map-get($backgroundColours,second);
+}
+
+.third.arrow_box:after {
+    @extend %arrowaft;
+    border-top-color:map-get($backgroundColours,third);
+}
+
+%arrowBef{
+    border-color: rgba(194, 225, 245, 0);
+	border-width: 15px;
+	margin-left: -15px;
+
+}
+.first.arrow_box:before {
+    @extend %arrowBef;
+	border-top-color:map-get($backgroundColours,first);
+}
+
+.second.arrow_box:before {
+    @extend %arrowBef;
+	border-top-color:map-get($backgroundColours,second);
+}
+
+.third.arrow_box:before {
+    @extend %arrowBef;
+	border-top-color:map-get($backgroundColours,third);
+}
+//***************************
+
+@keyframes hoverOnWhite {
+    from {
+     background-color:map-get($fontColours,tertiary);
+    }
+  
+    to {
+      
+     background-color:map-get($fontColours,primary);;
+    }
+  }
+
+  @keyframes changeFont {
+    from {
+     color: map-get($fontColours,primary);;
+    }
+  
+    to {
+      
+     color:map-get($fontColours,tertiary);
+    }
+  }
+
+  @keyframes hoverOnPink {
+    from {
+     background-color:map-get($fontColours,primary);;
+    }
+  
+    to {
+      
+     background-color: rgb(255, 101, 70);
+    }
+  }
+
+  @keyframes appearances {
+    from {
+      opacity:0
+      
+    }
+    to {
+      opacity: 1;
+      
+    }
+}
